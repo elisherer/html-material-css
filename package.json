@@ -1,6 +1,6 @@
 {
   "name": "html-material-css",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Material Design for native html components using only CSS",
   "homepage": "https://elisherer.github.io/html-material-css",
   "main": "./src/index.js",

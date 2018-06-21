@@ -1,0 +1,17 @@
+{
+  "name": "html-material-css",
+  "version": "0.1.0",
+  "description": "Material Design for native html components using only CSS",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elisherer/html-material-css.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Eli Sherer",
+    "email": "eli.sherer@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["less", "material", "design", "html", "html5", "css", "pure"]
+}

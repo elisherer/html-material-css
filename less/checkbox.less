@@ -1,0 +1,68 @@
+@checkbox-outline-color: @color-grey900;
+@checkbox-outline-color-checked: @color-default-primary;
+@checkbox-fill-color-checked: @checkbox-outline-color-checked;
+@checkbox-check-color: @color-grey50;
+@checkbox-error-color: @color-redA400;
+@checkbox-outline-color-disabled: @color-grey500;
+@checkbox-fill-color-disabled: @checkbox-outline-color-disabled;
+
+label input[type=checkbox] {
+  opacity: 0;
+  margin: 0 0 8px 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  & + span {
+    padding-left: 1.5em;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+  }
+  &:disabled + span {
+    cursor: not-allowed;
+  }
+  & + span:before {
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 1em;
+    height: 1em; display: inline-block;
+    line-height: 1em;
+    text-align: center;
+    border: 2px solid @checkbox-outline-color;
+    border-radius: 2px;
+    font-family: sans-serif;
+    content:'';
+    transition: all 100ms ease-in-out;
+    //background-color ??
+  }
+  &:checked + span:before {
+    border: 2px solid @checkbox-outline-color-checked;
+    background-color: @checkbox-fill-color-checked;
+  }
+  &[data-error] + span:before {
+    border: 2px solid @checkbox-error-color;
+  }
+  &[data-error]:checked + span:before {
+    background-color: @checkbox-error-color;
+  }
+  &:disabled + span:before {
+    border-color: @checkbox-outline-color-disabled;
+  }
+  &:checked:disabled + span:before {
+    background-color: @checkbox-fill-color-disabled;
+  }
+
+  /* Check mark */
+  &:checked + span:after {
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    color: white;
+    content: '';
+    transform: rotate(45deg);
+    width: 0.5em;
+    height: 0.8em;
+    box-shadow: 2px 2px white;
+  }
+}

@@ -1,0 +1,64 @@
+@radio-outline-color: @color-grey900;
+@radio-outline-color-checked: @color-default-primary;
+@radio-radio-color-checked: @radio-outline-color-checked;
+@radio-error-color: @color-redA400;
+@radio-outline-color-disabled: @color-grey500;
+@radio-check-color-disabled: @radio-outline-color-disabled;
+
+label input[type=radio] {
+  opacity: 0;
+  margin: 0 0 8px 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+
+  & + span {
+    padding-left: 1.5em;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+  }
+  &:disabled + span {
+    cursor: not-allowed;
+  }
+  & + span:before {
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 1em;
+    height: 1em; display: inline-block;
+    line-height: 1;
+    text-align: center;
+    border: 2px solid @radio-outline-color;
+    border-radius: 1em;
+    font-family: sans-serif;
+    content:'';
+    transition: all 100ms ease-in-out;
+    //background-color ??
+  }
+  @-moz-document url-prefix() {
+    & + span:before {
+      line-height: 0.9; /* fix line-height in firefox */
+    }
+  }
+  &:checked + span:before {
+    content:'\25cf';
+    /* // circle as an image (but only black)
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTI0IDI0SDBWMGgyNHYyNHoiIGZpbGw9Im5vbmUiLz4gICAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgZmlsbD0iIzAxMDEwMSIgcj0iOCIvPjwvc3ZnPg==);
+    background-size: contain;
+    */
+    border: 2px solid @radio-outline-color-checked;
+    color: @radio-radio-color-checked;
+  }
+  &[data-error] + span:before {
+    border: 2px solid @radio-error-color;
+  }
+  &[data-error]:checked + span:before {
+    content:'\25cf';
+    color: @radio-error-color;
+  }
+  &:disabled + span:before {
+    border-color: @radio-outline-color-disabled;
+    color: @radio-check-color-disabled;
+  }
+}

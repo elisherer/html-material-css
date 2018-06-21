@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics --
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA--1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA--1');
+  </script>
+ -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="HandheldFriendly" content="true" />
+  <title>html-material-css</title>
+  <meta name="description" content="Material Design for native html components using only CSS">
+  <meta name="author" content="Eli Sherer">
+  <link rel="canonical" href="https://html-material-css.github.io/">
+  <meta name="googlebot" content="noarchive">
+
+  <meta property="og:title" content="html-material-css">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://html-material-css.github.io/">
+  <meta property="og:site_name" content="html-material-css">
+  <meta property="og:description" content="Material Design for native html components using only CSS">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="theme-color" content="#1e88e5">
+  
+  <link rel="stylesheet/less" type="text/css" href="../less/material.less">
+  <style type="text/less">
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app {
+    nav {
+      background-color: #1e88e5;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+      height: 48px;
+      line-height: 48px;
+  
+      z-index: 1;
+      text-align: left;
+      top: 0;
+      width: 100%;
+  
+      color: white;
+      font-size: 1.2em;
+      font-weight: 400;
+      padding-bottom: 5px;
+  	i {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 32px;
+        height: 32px;
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjU0OSA0MzguNTQ5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwOS4xMzIsMTE0LjU3M2MtMTkuNjA4LTMzLjU5Ni00Ni4yMDUtNjAuMTk0LTc5Ljc5OC03OS44QzI5NS43MzYsMTUuMTY2LDI1OS4wNTcsNS4zNjUsMjE5LjI3MSw1LjM2NSAgIGMtMzkuNzgxLDAtNzYuNDcyLDkuODA0LTExMC4wNjMsMjkuNDA4Yy0zMy41OTYsMTkuNjA1LTYwLjE5Miw0Ni4yMDQtNzkuOCw3OS44QzkuODAzLDE0OC4xNjgsMCwxODQuODU0LDAsMjI0LjYzICAgYzAsNDcuNzgsMTMuOTQsOTAuNzQ1LDQxLjgyNywxMjguOTA2YzI3Ljg4NCwzOC4xNjQsNjMuOTA2LDY0LjU3MiwxMDguMDYzLDc5LjIyN2M1LjE0LDAuOTU0LDguOTQ1LDAuMjgzLDExLjQxOS0xLjk5NiAgIGMyLjQ3NS0yLjI4MiwzLjcxMS01LjE0LDMuNzExLTguNTYyYzAtMC41NzEtMC4wNDktNS43MDgtMC4xNDQtMTUuNDE3Yy0wLjA5OC05LjcwOS0wLjE0NC0xOC4xNzktMC4xNDQtMjUuNDA2bC02LjU2NywxLjEzNiAgIGMtNC4xODcsMC43NjctOS40NjksMS4wOTItMTUuODQ2LDFjLTYuMzc0LTAuMDg5LTEyLjk5MS0wLjc1Ny0xOS44NDItMS45OTljLTYuODU0LTEuMjMxLTEzLjIyOS00LjA4Ni0xOS4xMy04LjU1OSAgIGMtNS44OTgtNC40NzMtMTAuMDg1LTEwLjMyOC0xMi41Ni0xNy41NTZsLTIuODU1LTYuNTdjLTEuOTAzLTQuMzc0LTQuODk5LTkuMjMzLTguOTkyLTE0LjU1OSAgIGMtNC4wOTMtNS4zMzEtOC4yMzItOC45NDUtMTIuNDE5LTEwLjg0OGwtMS45OTktMS40MzFjLTEuMzMyLTAuOTUxLTIuNTY4LTIuMDk4LTMuNzExLTMuNDI5Yy0xLjE0Mi0xLjMzMS0xLjk5Ny0yLjY2My0yLjU2OC0zLjk5NyAgIGMtMC41NzItMS4zMzUtMC4wOTgtMi40MywxLjQyNy0zLjI4OWMxLjUyNS0wLjg1OSw0LjI4MS0xLjI3Niw4LjI4LTEuMjc2bDUuNzA4LDAuODUzYzMuODA3LDAuNzYzLDguNTE2LDMuMDQyLDE0LjEzMyw2Ljg1MSAgIGM1LjYxNCwzLjgwNiwxMC4yMjksOC43NTQsMTMuODQ2LDE0Ljg0MmM0LjM4LDcuODA2LDkuNjU3LDEzLjc1NCwxNS44NDYsMTcuODQ3YzYuMTg0LDQuMDkzLDEyLjQxOSw2LjEzNiwxOC42OTksNi4xMzYgICBjNi4yOCwwLDExLjcwNC0wLjQ3NiwxNi4yNzQtMS40MjNjNC41NjUtMC45NTIsOC44NDgtMi4zODMsMTIuODQ3LTQuMjg1YzEuNzEzLTEyLjc1OCw2LjM3Ny0yMi41NTksMTMuOTg4LTI5LjQxICAgYy0xMC44NDgtMS4xNC0yMC42MDEtMi44NTctMjkuMjY0LTUuMTRjLTguNjU4LTIuMjg2LTE3LjYwNS01Ljk5Ni0yNi44MzUtMTEuMTRjLTkuMjM1LTUuMTM3LTE2Ljg5Ni0xMS41MTYtMjIuOTg1LTE5LjEyNiAgIGMtNi4wOS03LjYxNC0xMS4wODgtMTcuNjEtMTQuOTg3LTI5Ljk3OWMtMy45MDEtMTIuMzc0LTUuODUyLTI2LjY0OC01Ljg1Mi00Mi44MjZjMC0yMy4wMzUsNy41Mi00Mi42MzcsMjIuNTU3LTU4LjgxNyAgIGMtNy4wNDQtMTcuMzE4LTYuMzc5LTM2LjczMiwxLjk5Ny01OC4yNGM1LjUyLTEuNzE1LDEzLjcwNi0wLjQyOCwyNC41NTQsMy44NTNjMTAuODUsNC4yODMsMTguNzk0LDcuOTUyLDIzLjg0LDEwLjk5NCAgIGM1LjA0NiwzLjA0MSw5LjA4OSw1LjYxOCwxMi4xMzUsNy43MDhjMTcuNzA1LTQuOTQ3LDM1Ljk3Ni03LjQyMSw1NC44MTgtNy40MjFzMzcuMTE3LDIuNDc0LDU0LjgyMyw3LjQyMWwxMC44NDktNi44NDkgICBjNy40MTktNC41NywxNi4xOC04Ljc1OCwyNi4yNjItMTIuNTY1YzEwLjA4OC0zLjgwNSwxNy44MDItNC44NTMsMjMuMTM0LTMuMTM4YzguNTYyLDIxLjUwOSw5LjMyNSw0MC45MjIsMi4yNzksNTguMjQgICBjMTUuMDM2LDE2LjE4LDIyLjU1OSwzNS43ODcsMjIuNTU5LDU4LjgxN2MwLDE2LjE3OC0xLjk1OCwzMC40OTctNS44NTMsNDIuOTY2Yy0zLjksMTIuNDcxLTguOTQxLDIyLjQ1Ny0xNS4xMjUsMjkuOTc5ICAgYy02LjE5MSw3LjUyMS0xMy45MDEsMTMuODUtMjMuMTMxLDE4Ljk4NmMtOS4yMzIsNS4xNC0xOC4xODIsOC44NS0yNi44NCwxMS4xMzZjLTguNjYyLDIuMjg2LTE4LjQxNSw0LjAwNC0yOS4yNjMsNS4xNDYgICBjOS44OTQsOC41NjIsMTQuODQyLDIyLjA3NywxNC44NDIsNDAuNTM5djYwLjIzN2MwLDMuNDIyLDEuMTksNi4yNzksMy41NzIsOC41NjJjMi4zNzksMi4yNzksNi4xMzYsMi45NSwxMS4yNzYsMS45OTUgICBjNDQuMTYzLTE0LjY1Myw4MC4xODUtNDEuMDYyLDEwOC4wNjgtNzkuMjI2YzI3Ljg4LTM4LjE2MSw0MS44MjUtODEuMTI2LDQxLjgyNS0xMjguOTA2ICAgQzQzOC41MzYsMTg0Ljg1MSw0MjguNzI4LDE0OC4xNjgsNDA5LjEzMiwxMTQuNTczeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+      }
+  	span {
+        margin-left: 48px;
+      } 
+    }
+    main {
+      display: block;
+      width: 300px;
+      margin-left: 20px;
+    }
+  }
+  </style>
+  
+  <script>
+  less = {
+    relativeUrls: true,
+    rootpath: ":/a.com/"
+  };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.4/less.min.js" integrity="sha256-lJjO5bbbTpBQ6HBdACyjpuw8C5B/4fQ4azm/oy8jbJA=" crossorigin="anonymous"></script>
+  </head>
+<body>
+<div class="app">
+  <nav>
+    <a href="https://github.com/elisherer/html-material-css"><i class="menu-icon"></i></a>
+    <span>html-material-css</span>
+  </nav>
+
+  <main>
+
+	<h2 data-tooltip="hint tooltip">Textbox</h2>
+
+	<label>
+	  <input type="text" />
+	  <span>Hint text</span>
+	</label>
+
+	<input type="text" data-error placeholder="Error"/>
+
+	<input type="text" disabled value="This is disabled"/>
+
+	<input type="date" />
+
+	<textarea placeholder="Text area hint text"></textarea>
+
+	<textarea placeholder="Text area disabled" disabled></textarea>
+
+	<h2>Select</h2>
+
+	<select>
+	  <option>Option 1</option>
+	  <option>Option 2</option>
+	</select>
+
+	<select data-error>
+	  <option>Option 1</option>
+	  <option>Option 2</option>
+	</select>
+
+	<select disabled>
+	  <option>Option 1</option>
+	  <option selected>Option 2</option>
+	</select>
+
+	<h2>Checkbox</h2>
+
+	<label>
+	  <input type="checkbox"/>
+	  <span>Checkbox</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="checkbox" checked/>
+	  <span>Checkbox</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="checkbox" data-error/>
+	  <span>Checkbox</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="checkbox" disabled/>
+	  <span>Checkbox</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="checkbox" disabled checked/>
+	  <span>Checkbox</span>
+	</label>
+	<br/>
+
+	<h2>Radio Buttons</h2>
+
+	<label>
+	  <input type="radio" name="r"/>
+	  <span>Radio 1</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="radio" name="r" checked/>
+	  <span>Radio 2</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="radio" name="r" data-error/>
+	  <span>Radio 3</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="radio" disabled/>
+	  <span>Radio 4</span>
+	</label>
+	<br/>
+
+	<label>
+	  <input type="radio" disabled checked/>
+	  <span>Radio 5</span>
+	</label>
+	<br />
+
+	<h2>Range</h2>
+
+	<input type="range"/>
+
+	<h2>Button</h2>
+
+	<button disabled>Submit</button> &nbsp; <button data-tooltip="this is a tooltip">Tooltip</button> &nbsp; <button>Ripple</button>
+
+	<h2>Spinner</h2>
+
+	<div data-spinner></div>
+	<div data-spinner style="font-size: 10px"></div>
+
+  </main>
+</div>
+  <script>
+  /* This is a fix for detecting when an input field has a value filled */
+  document.addEventListener('input', function(e) {
+    e.target.setAttribute('value', e.target.value);
+  });
+  document.querySelectorAll('input').forEach(function(el) {
+    el.setAttribute('value', el.value || '');
+  });
+  </script>
+</body>
+</html>

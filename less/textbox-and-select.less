@@ -1,0 +1,94 @@
+@input-placholder-color: @color-grey500;
+
+::placeholder { font: @material-font; color: @input-placholder-color; } /* CSS level 4 */
+::-webkit-input-placeholder { font: @material-font; color: @input-placholder-color; }
+:-ms-input-placeholder { font: @material-font; color: @input-placholder-color !important; } /* ie 10-11 */
+::-ms-input-placeholder { font: @material-font; color: @input-placholder-color; } /* edge */
+:-moz-placeholder { font: @material-font; color: @input-placholder-color; opacity: 1; } /* firefox 4-18 */
+::-moz-placeholder { font: @material-font; color: @input-placholder-color; opacity: 1; } /* firefox 19+ */
+
+@input-bottom-line-color: @color-grey500;
+@input-bottom-line-color-active: @color-default-primary;
+@input-error-color: @color-redA400;
+@input-disabled-color: @color-grey500;
+
+@ic_keyboard_arrow_down_grey_24px: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjYmRiZGJkIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTcuNDEgNy44NEwxMiAxMi40Mmw0LjU5LTQuNThMMTggOS4yNWwtNiA2LTYtNnoiLz4gICAgPHBhdGggZD0iTTAtLjc1aDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
+
+input:not([type]),
+input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]),
+select,
+textarea {
+  color: @material-text-color;
+
+  border: 0;
+  margin: 0.5em 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid @input-bottom-line-color;
+  font-size: 1em;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 200ms ease-in-out;
+
+  &:active, &:focus{
+    border-color: @input-bottom-line-color-active;
+  }
+  &[data-error] {
+    border-color: @input-error-color;
+  }
+  &:disabled{
+    background-color: transparent;
+    border-color: @input-disabled-color;
+    border-style: dotted;
+    color: @input-disabled-color;
+    cursor: not-allowed;
+  }
+  label &{
+	+ span {
+      pointer-events: none;
+      color: @input-placholder-color;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: all cubic-bezier(0.4, 0, 0.2, 1) 300ms;
+    }
+    &:focus ~ span{
+      color: @input-bottom-line-color-active;
+      font-size: 0.9em;
+      bottom: 1.5em;
+    }
+    &[value]:not([value=""]) + span, &[data-fixed] ~ span {
+      font-size: 0.9em;
+      bottom: 1.5em;
+    }
+	&:autofill ~ span {
+      font-size: 0.9em;
+      bottom: 1.5em;
+    }
+    &:-webkit-autofill ~ span {
+      font-size: 0.9em;
+      bottom: 1.5em;
+    }
+	&:-moz-autofill ~ span {
+      font-size: 0.9em;
+      bottom: 1.5em;
+    }
+  }
+}
+
+select {
+  width: 100%;
+  background: transparent @ic_keyboard_arrow_down_grey_24px right center no-repeat;
+  box-shadow: none;
+  // Removes 'handles' from select
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-margin-start: -3px;
+  &::-ms-expand {
+    display: none;
+  }
+
+  option {
+    color: @material-text-color;
+    background-color: @material-background-color;
+  }
+}

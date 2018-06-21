@@ -1,16 +1,9 @@
-@input-placholder-color: @color-grey500;
-
 ::placeholder { font: @material-font; color: @input-placholder-color; } /* CSS level 4 */
 ::-webkit-input-placeholder { font: @material-font; color: @input-placholder-color; }
 :-ms-input-placeholder { font: @material-font; color: @input-placholder-color !important; } /* ie 10-11 */
 ::-ms-input-placeholder { font: @material-font; color: @input-placholder-color; } /* edge */
 :-moz-placeholder { font: @material-font; color: @input-placholder-color; opacity: 1; } /* firefox 4-18 */
 ::-moz-placeholder { font: @material-font; color: @input-placholder-color; opacity: 1; } /* firefox 19+ */
-
-@input-bottom-line-color: @color-grey500;
-@input-bottom-line-color-active: @color-default-primary;
-@input-error-color: @color-redA400;
-@input-disabled-color: @color-grey500;
 
 @ic_keyboard_arrow_down_grey_24px: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjYmRiZGJkIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTcuNDEgNy44NEwxMiAxMi40Mmw0LjU5LTQuNThMMTggOS4yNWwtNiA2LTYtNnoiLz4gICAgPHBhdGggZD0iTTAtLjc1aDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
 
@@ -21,7 +14,7 @@ textarea {
   color: @material-text-color;
 
   border: 0;
-  margin: 0.5em 0;
+  margin-top: 0.5em;
   padding-bottom: 0.5em;
   border-bottom: 1px solid @input-bottom-line-color;
   font-size: 1em;
@@ -32,8 +25,16 @@ textarea {
   &:active, &:focus{
     border-color: @input-bottom-line-color-active;
   }
-  &[data-error] {
+  &[data-error], &:invalid {
     border-color: @input-error-color;
+    + sup {
+      color: @input-error-color;
+    }
+    label &{
+      + span, &:focus + span {
+        color: @input-error-color;
+      }
+    }
   }
   &:disabled{
     background-color: transparent;
@@ -51,27 +52,30 @@ textarea {
       bottom: 0;
       transition: all cubic-bezier(0.4, 0, 0.2, 1) 300ms;
     }
-    &:focus ~ span{
+    &:focus + span{
       color: @input-bottom-line-color-active;
       font-size: 0.9em;
       bottom: 1.5em;
     }
-    &[value]:not([value=""]) + span, &[data-fixed] ~ span {
+    &[value]:not([value=""]) + span, &[data-fixed] + span {
       font-size: 0.9em;
       bottom: 1.5em;
     }
-	&:autofill ~ span {
+	&:autofill + span {
       font-size: 0.9em;
       bottom: 1.5em;
     }
-    &:-webkit-autofill ~ span {
+    &:-webkit-autofill + span {
       font-size: 0.9em;
       bottom: 1.5em;
     }
-	&:-moz-autofill ~ span {
+	&:-moz-autofill + span {
       font-size: 0.9em;
       bottom: 1.5em;
     }
+  }
+  + sup {
+    display: block;
   }
 }
 

@@ -17,7 +17,7 @@ npm i -S html-material-css
 @import '~html-material-css/less/material.less';
 
 // Possibly use the dark theme
-@import '~html-material-css/less/themes/dark.less';
+@color-theme-dark: true;
 ```
 
 ## Colors
@@ -99,3 +99,9 @@ You can also use common-js (which will include the script above):
 ```js
 import 'html-material-css';
 ```
+
+## Errors
+
+Errors are automatically shown when inputs are `invalid` (Native html5 behavior: `required` with an empty `value`, `value` not matching a `pattern`, ...)
+
+To mark errors expilicitly on inputs, you can add the attribute `data-error`.

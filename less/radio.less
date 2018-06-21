@@ -1,10 +1,3 @@
-@radio-outline-color: @color-grey900;
-@radio-outline-color-checked: @color-default-primary;
-@radio-radio-color-checked: @radio-outline-color-checked;
-@radio-error-color: @color-redA400;
-@radio-outline-color-disabled: @color-grey500;
-@radio-check-color-disabled: @radio-outline-color-disabled;
-
 label input[type=radio] {
   opacity: 0;
   margin: 0 0 8px 0;
@@ -17,6 +10,9 @@ label input[type=radio] {
     margin-bottom: 8px;
     position: relative;
     cursor: pointer;
+    + sup {
+      display: block;
+    }
   }
   &:disabled + span {
     cursor: not-allowed;
@@ -50,12 +46,17 @@ label input[type=radio] {
     border: 2px solid @radio-outline-color-checked;
     color: @radio-radio-color-checked;
   }
-  &[data-error] + span:before {
+  &[data-error] + span:before, &:invalid + span:before {
     border: 2px solid @radio-error-color;
   }
-  &[data-error]:checked + span:before {
+  &[data-error]:checked + span:before, &:invalid:checked + span:before {
     content:'\25cf';
     color: @radio-error-color;
+  }
+  &[data-error], &:invalid {
+    + span + sup {
+      color: @input-error-color;
+    }
   }
   &:disabled + span:before {
     border-color: @radio-outline-color-disabled;

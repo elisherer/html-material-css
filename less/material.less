@@ -1,8 +1,12 @@
 @import './colors.less';
-@color-default-primary: @color-blue600;
 
-@material-text-color: @color-grey900;
-@material-background-color: white;
+@color-theme: light;
+.imports(light) {@import './themes/light.less';}
+.imports(dark) {@import './themes/dark.less';}
+.imports(@color-theme);
+
+@material-text-color: @color-default-accent;
+@material-background-color: @color-default-background;
 @material-font: 16px Roboto, Ubuntu, "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 @material-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
 

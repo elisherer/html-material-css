@@ -1,7 +1,7 @@
 # html-material-css
 Material Design for native html components using only CSS
 
-https://html-material-css.github.io/
+https://elisherer.github.io/html-material-css
 
 # Usage
 

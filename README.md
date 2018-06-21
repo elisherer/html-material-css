@@ -17,14 +17,14 @@ npm i -S html-material-css
 @import '~html-material-css/less/material.less';
 
 // Possibly use the dark theme
-@color-theme-dark: true;
+@color-theme: dark;
 ```
 
 ## Colors
 
 Using less variables you can use any of the material design colors:
 
-```
+```less
 @import '~html-material-css/less/colors.less';
 
 .some-element {
@@ -71,10 +71,10 @@ import update from 'html-material-css/less/icons/update.less';
 
 In order to enable the floating label on an input, you need to specify when the input has content by adding the `data-fixed` attribute.
 ```html
-	<label>
-	  <input type="text" data-fixed="true"/>
-	  <span>Hint text</span>
-	</label>
+<label>
+  <input type="text" data-fixed="true"/>
+  <span>Hint text</span>
+</label>
 ```
 
 Or you can ...
@@ -85,13 +85,13 @@ You can automatically set all inputs' values attributes on change by running thi
 This will let you **not use** the `data-fixed` attribute to enable floating labels.
 
 ```js
-  /* This is a fix for detecting when an input field has a value filled */
-  document.addEventListener('input', function(e) {
-    e.target.setAttribute('value', e.target.value);
-  });
-  document.querySelectorAll('input').forEach(function(el) {
-    el.setAttribute('value', el.value || '');
-  });
+/* This is a fix for detecting when an input field has a value filled */
+document.addEventListener('input', function(e) {
+e.target.setAttribute('value', e.target.value);
+});
+document.querySelectorAll('input').forEach(function(el) {
+el.setAttribute('value', el.value || '');
+});
 ```
 
 You can also use common-js (which will include the script above):

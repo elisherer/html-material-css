@@ -12,10 +12,10 @@
   </script>
  -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta http-equiv="Cache-Control" content="no-cache">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="HandheldFriendly" content="true"/>
   <title>html-material-css</title>
   <meta name="description" content="Material Design for native html components using only CSS">
   <meta name="author" content="Eli Sherer">
@@ -30,16 +30,16 @@
   <meta property="og:locale" content="en_US">
 
   <meta name="theme-color" content="#1e88e5">
-	<link rel="stylesheet/less" type="text/css" href="style.less">
+  <link rel="stylesheet/less" type="text/css" href="style.less">
 
   <script>
-  less = {
-    relativeUrls: true,
-    rootpath: ":/a.com/"
-  };
+    less = {
+      relativeUrls: true
+    };
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.4/less.min.js" integrity="sha256-lJjO5bbbTpBQ6HBdACyjpuw8C5B/4fQ4azm/oy8jbJA=" crossorigin="anonymous"></script>
-  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.4/less.min.js"
+          integrity="sha256-lJjO5bbbTpBQ6HBdACyjpuw8C5B/4fQ4azm/oy8jbJA=" crossorigin="anonymous"></script>
+</head>
 <body>
 <div class="app">
   <nav>
@@ -49,146 +49,167 @@
 
   <main>
 
-	<h2>Themes</h2>
-	<label>
-		<input type="radio" name="theme" value="light" checked  onchange="onThemeChange(this.value)"/>
-		<span>Light</span>
-	</label>
-	<label>
-		<input type="radio" name="theme" value="dark"  onchange="onThemeChange(this.value)"/>
-		<span>Dark</span>
-	</label>
+    <h2>Themes</h2>
+    <label>
+      <input type="radio" name="theme" value="light" checked onchange="onThemeChange(this.value)"/>
+      <span>Light</span>
+    </label>
+    <label>
+      <input type="radio" name="theme" value="dark" onchange="onThemeChange(this.value)"/>
+      <span>Dark</span>
+    </label>
 
-	<h2>Tooltips</h2>
-	<span style="display: inline-block" data-tooltip="right bottom">Hover me</span> &nbsp; &nbsp; &nbsp;
-	<span style="display: inline-block" data-tooltip="left bottom" data-tooltip-left>Hover me</span><br/>
-	<span style="display: inline-block" data-tooltip="right top" data-tooltip-top>Hover me</span> &nbsp; &nbsp; &nbsp;
-	<span style="display: inline-block" data-tooltip="left top" data-tooltip-top data-tooltip-left>Hover me</span>
+    <h2>Tooltips</h2>
+    <span style="display: inline-block" data-tooltip="right bottom">Hover me</span> &nbsp; &nbsp; &nbsp;
+    <span style="display: inline-block" data-tooltip="left bottom" data-tooltip-left>Hover me</span><br/>
+    <span style="display: inline-block" data-tooltip="right top" data-tooltip-top>Hover me</span> &nbsp; &nbsp; &nbsp;
+    <span style="display: inline-block" data-tooltip="left top" data-tooltip-top data-tooltip-left>Hover me</span>
 
-	<h2>Textbox</h2>
+    <h2>Textbox</h2>
 
-	<label>
-	  <input type="text" />
-	  <span>Floating Label</span>
-	</label>
+    <label>
+      <input type="text"/>
+      <span>Floating Label</span>
+    </label>
 
-	<input type="text" disabled value="This is disabled"/>
+    <label>
+      <input type="checkbox" checked/>
+      <span>Checkbox</span>
+    </label>
 
-	<input type="date" />
+    <input type="text" disabled value="This is disabled"/>
 
-	<textarea placeholder="Text area hint text"></textarea>
+    <label>
+      <span>Datepicker fixed Label</span>
+      <input type="date"/>
+    </label>
 
-	<textarea placeholder="Text area disabled" disabled></textarea>
+    <textarea placeholder="Placeholder"></textarea>
 
-	<input type="text" data-error placeholder="Error"/>
-	<sup>This is an error</sup>
+    <textarea placeholder="Placeholder (disabled)" disabled></textarea>
 
-	<h2>Select</h2>
+    <label>
+      <span>Textarea Label</span>
+      <textarea placeholder="Placeholder"></textarea>
+    </label>
 
-	<select>
-		<option>Option 1</option>
-		<option>Option 2</option>
-	</select>
+    <label>
+      <input type="text" data-error/>
+      <span>Floating Label with Error</span>
+      <sup>This is an error</sup>
+    </label>
 
-	<select disabled>
-	  <option>Option 1</option>
-	  <option selected>Option 2</option>
-	</select>
+    <input type="text" data-error placeholder="Error"/>
+    <sup>This is an error</sup>
 
-	<select data-error>
-		<option>Option 1</option>
-		<option>Option 2</option>
-	</select>
-	<sup>This is an error</sup>
+    <h2>Select</h2>
 
-	<h2>Checkbox</h2>
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
 
-	<label>
-	  <input type="checkbox"/>
-	  <span>Checkbox</span>
-	</label>
-	<br/>
+    <select disabled>
+      <option>Option 1</option>
+      <option selected>Option 2</option>
+    </select>
 
-	<label>
-	  <input type="checkbox" checked/>
-	  <span>Checkbox</span>
-	</label>
-	<br/>
+    <select data-error>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+    <sup>This is an error</sup>
 
-	<label>
-		<input type="checkbox" disabled/>
-		<span>Checkbox</span>
-	</label>
-	<br/>
+    <h2>Checkbox</h2>
 
-	<label>
-		<input type="checkbox" disabled checked/>
-		<span>Checkbox</span>
-	</label>
-	<br/>
+    <label>
+      <input type="checkbox"/>
+      <span>Checkbox</span>
+    </label>
+    <br/>
 
-	<label>
-	  <input type="checkbox" data-error/>
-	  <span>Checkbox</span>
-		<sup>This is an error</sup>
-	</label>
-	<br/>
+    <label>
+      <input type="checkbox" checked/>
+      <span>Checkbox</span>
+    </label>
+    <br/>
 
-	<h2>Radio Buttons</h2>
+    <label>
+      <input type="checkbox" disabled/>
+      <span>Checkbox</span>
+    </label>
+    <br/>
 
-	<label>
-	  <input type="radio" name="r"/>
-	  <span>Radio 1</span>
-	</label>
-	<br/>
+    <label>
+      <input type="checkbox" disabled checked/>
+      <span>Checkbox</span>
+    </label>
+    <br/>
 
-	<label>
-	  <input type="radio" name="r" checked/>
-	  <span>Radio 2</span>
-	</label>
-	<br/>
+    <label>
+      <input type="checkbox" data-error/>
+      <span>Checkbox</span>
+      <sup>This is an error</sup>
+    </label>
+    <br/>
 
-	<label>
-		<input type="radio" disabled/>
-		<span>Radio 3</span>
-	</label>
-	<br/>
+    <h2>Radio Buttons</h2>
 
-	<label>
-		<input type="radio" disabled checked/>
-		<span>Radio 4</span>
-	</label>
-	<br />
+    <label>
+      <input type="radio" name="r"/>
+      <span>Radio 1</span>
+    </label>
+    <br/>
 
-	<label>
-	  <input type="radio" name="r" data-error/>
-	  <span>Radio 5</span>
-		<sup>This is an error</sup>
-	</label>
-	<br/>
+    <label>
+      <input type="radio" name="r" checked/>
+      <span>Radio 2</span>
+    </label>
+    <br/>
+
+    <label>
+      <input type="radio" disabled/>
+      <span>Radio 3</span>
+    </label>
+    <br/>
+
+    <label>
+      <input type="radio" disabled checked/>
+      <span>Radio 4</span>
+    </label>
+    <br/>
+
+    <label>
+      <input type="radio" name="r" data-error/>
+      <span>Radio 5</span>
+      <sup>This is an error</sup>
+    </label>
+    <br/>
 
 
-	<h2>Range</h2>
+    <h2>Range</h2>
 
-	<input type="range"/>
+    <input type="range"/>
 
-	<h2>Button</h2>
+    <h2>Button</h2>
 
-	<button disabled>Submit</button> &nbsp; <button data-tooltip="this is a tooltip">Tooltip</button> &nbsp; <button>Ripple</button>
+    <button disabled>Submit</button> &nbsp;
+    <button data-tooltip="this is a tooltip">Tooltip</button> &nbsp;
+    <button>Ripple</button>
 
-	<h2>Spinner</h2>
+    <h2>Spinner</h2>
 
-	<div data-spinner></div>
-	<div data-spinner style="font-size: 10px"></div>
+    <div data-spinner></div>
+    <div data-spinner style="font-size: 10px"></div>
 
   </main>
 </div>
-  <script>
+<script>
   /* This is a fix for detecting when an input field has a value filled */
-  document.addEventListener('input', function(e) {
+  document.addEventListener('input', function (e) {
     e.target.setAttribute('value', e.target.value);
   });
-  document.querySelectorAll('input').forEach(function(el) {
+  document.querySelectorAll('input').forEach(function (el) {
     el.setAttribute('value', el.value || '');
   });
   var onThemeChange = function (value) {
@@ -196,6 +217,6 @@
       '@color-theme': value
     });
   }
-  </script>
+</script>
 </body>
 </html>

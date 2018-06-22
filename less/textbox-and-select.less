@@ -22,18 +22,17 @@ textarea {
   outline: none;
   transition: border-color 200ms ease-in-out;
 
+  label span + & {
+    margin-top: 0;
+  }
+
   &:active, &:focus{
     border-color: @input-bottom-line-color-active;
   }
   &[data-error], &:invalid {
     border-color: @input-error-color;
-    + sup {
+    + sup, + span + sup {
       color: @input-error-color;
-    }
-    label &{
-      + span, &:focus + span {
-        color: @input-error-color;
-      }
     }
   }
   &:disabled{
@@ -49,30 +48,34 @@ textarea {
       pointer-events: none;
       color: @input-placholder-color;
       position: absolute;
+      width: 100vw;
       left: 0;
-      bottom: 0;
+      top: 0;
       transition: all cubic-bezier(0.4, 0, 0.2, 1) 300ms;
+      + sup {
+        display: block;
+      }
     }
     &:focus + span{
       color: @input-bottom-line-color-active;
       font-size: 0.9em;
-      bottom: 1.5em;
+      top: -1.5em;
     }
     &[value]:not([value=""]) + span, &[data-fixed] + span {
       font-size: 0.9em;
-      bottom: 1.5em;
+      top: -1.5em;
     }
-	&:autofill + span {
+	  &:autofill + span {
       font-size: 0.9em;
-      bottom: 1.5em;
+      top: -1.5em;
     }
     &:-webkit-autofill + span {
       font-size: 0.9em;
-      bottom: 1.5em;
+      top: -1.5em;
     }
-	&:-moz-autofill + span {
+	  &:-moz-autofill + span {
       font-size: 0.9em;
-      bottom: 1.5em;
+      top: -1.5em;
     }
   }
   + sup {

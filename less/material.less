@@ -18,6 +18,12 @@ html, body, input, textarea, keygen, select, option, button {
 
 label {
   position: relative;
+  > span:first-child
+  {
+    display: block;
+    color: @input-placholder-color;
+    font-size: 0.9em;
+  }
 }
 
 @import './icon.less';
